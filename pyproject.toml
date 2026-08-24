@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shopify-ai-agent"
+version = "0.1.0"
+description = "Read a Shopify products CSV export and enrich each product (SEO title, meta description, tags) via a pluggable LLM provider."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+py-modules = ["shopify_agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
